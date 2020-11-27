@@ -1,13 +1,14 @@
 a=int(input())
 b=int(input())
-k=0
+x=[]
 
 for i in range (a,b+1):
-    for j in range (2,i):
+    if i <= 1:
+        continue
+    for j in range (2,i//2+1):
         if i%j==0:
-            k=k+1
-    if k==0:
-        print (i)
-        k=0
+            break
     else:
-        k=0
+        x.append (i)
+        
+print (x)
